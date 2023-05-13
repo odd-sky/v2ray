@@ -12,7 +12,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
         with:
-          ref: master
           fetch-depth: 0
       - name: get ver
         run: |
