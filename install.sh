@@ -39,8 +39,8 @@ cmd=$(type -P apt-get || type -P yum)
 [[ ! $cmd ]] && err "此脚本仅支持 ${yellow}(Ubuntu or Debian or CentOS)${none}."
 
 # systemd
-[[ ! $(type -P systemd) ]] && {
-    err "此系统缺少 ${yellow}(systemd)${none}, 请尝试执行:${yellow} ${cmd} update -y;${cmd} install systemd -y ${none}来修复此错误."
+[[ ! $(type -P systemctl) ]] && {
+    err "此系统缺少 ${yellow}(systemctl)${none}, 请尝试执行:${yellow} ${cmd} update -y;${cmd} install systemd -y ${none}来修复此错误."
 }
 
 # wget installed or none
